@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Currenverter</string>
+    <string name="app_name">Convertidor</string>
+    <string name="label_cantidad">Cantidad</string>
 </resources>
