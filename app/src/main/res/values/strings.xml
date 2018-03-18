@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Convertidor</string>
-    <string name="label_cantidad">Cantidad</string>
+    <string name="quantity_label">Cantidad</string>
 </resources>

@@ -1,20 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.demoyageek.currenverter.MainActivity">
+    android:paddingLeft="16sp"
+    android:paddingRight="16sp"
+    android:paddingTop="15sp">
+    <ImageButton
+        android:id="@+id/exchange_button"
+        android:layout_width="50sp"
+        android:layout_height="40sp"
+        android:src="@drawable/ic_exchange_arrow"
+        android:layout_below="@+id/convert_from_label"
+        android:layout_centerInParent="true"
+        android:background="@drawable/button_shape"/>
     <Spinner
-        android:id="@+id/spinner_one"
+        android:id="@+id/convert_from_spinner"
+        android:layout_width="115sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convert_from_label"
+        android:layout_alignParentLeft="true"
+        />
+    <Spinner
+        android:id="@+id/convert_to_spinner"
+        android:layout_width="115sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convert_to_label"
+        android:layout_alignParentRight="true"
+        />
+    <TextView
+        android:paddingTop="15sp"
+        android:layout_marginBottom="10sp"
+        style="@style/AppLabels"
+        android:id="@+id/quantity_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quantity_label"
+        android:layout_below="@+id/convert_from_spinner"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/currency_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/quantity_TextView"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:layout_marginBottom="10sp"
         />
-
     <Button
         android:id="@+id/convert_button"
-        android:layout_width="match_parent"
+        android:layout_width="100sp"
+        android:layout_height="30sp"
+        android:layout_below="@+id/currency_input"
+        android:layout_centerInParent="true"
+        android:text="Convertir"
+        android:background="@drawable/button_shape"
+        android:textColor="@color/colorPrimary"
+        />
+    <TextView
+        android:id="@+id/convert_from_label"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner_one"/>
+        android:text="De:"
+        android:paddingRight="165sp"/>
+
+    <TextView
+        android:id="@+id/convert_to_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A:"
+        android:layout_toRightOf="@+id/convert_from_label"/>
 </RelativeLayout>
+
